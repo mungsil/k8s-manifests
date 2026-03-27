@@ -1,0 +1,27 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: mysql-config
+data:
+  database: whatToEat_prod
+  username: appuser
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: spring-boot-config
+data:
+  DB_HOST: mysql-svc
+  DB_PORT: "3306"
+  DB_NAME: whatToEat_prod
+  DB_USER: appuser
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: redmine-config
+data:
+  DB_HOST: mysql-svc
+  DB_PORT: "3306"
+  DB_NAME: redminedb
+  DB_USER: appuser
