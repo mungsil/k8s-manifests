@@ -20,7 +20,7 @@ spec:
         runAsUser: 1000
       containers:
         - name: jenkins
-          image: jenkins/jenkins:lts
+          image: ghcr.io/mungsil/jenkins-buildah:latest
           ports:
             - containerPort: 8080
             - containerPort: 50000
